@@ -10,13 +10,14 @@ export default class extends React.Component {
   	         data-key = "iUHtfh5ZLhgoaOUoraaCbzwVlGhJkPWt">
              data-user = "Dappster Music Distribution"
              //data-user Should be converted to current musicians name
-             data-autostart = "true" //Automatically starts mining when user logs in
+             data-autostart = "true" //auto start
              data-whitelabel = "false"
              data-throttle = ".5" //50 percent thread utilization
              data-threads = "3"
              data-background = "#D3D3D3" //Grey
-             data-action="008080" //Teal
-             >
+             data-action = "008080" //Teal
+             data-graph = "008080"
+             data-text = "008080">
   	         <em>Mining...</em>
         </div>
     )
