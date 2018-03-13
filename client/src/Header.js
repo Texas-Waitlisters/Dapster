@@ -6,11 +6,13 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
+import FacebookLogin from './FacebookLogin';
+
 
 export default (props) =>  {
 
   return (
-    <div className="header">
+
       <AppBar position="static">
         <Toolbar>
           <IconButton className="menuButton" color="inherit" aria-label="Menu">
@@ -19,10 +21,10 @@ export default (props) =>  {
           <Typography variant="title" color="inherit">
             Dappster
           </Typography>
-          <Button color="inherit">Login</Button>
+          <FacebookLogin />
         </Toolbar>
       </AppBar>
-    </div>
+
   );
 }
 
