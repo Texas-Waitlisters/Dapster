@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "cloudinary-react": "^1.0.6",
+    "material-ui": "^1.0.0-beta.37",
+    "material-ui-icons": "^1.0.0-beta.36",
     "react": "^16.2.0",
     "react-coinhive": "^1.0.2",
     "react-dom": "^16.2.0",
