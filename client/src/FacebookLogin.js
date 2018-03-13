@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import FacebookLogin from 'react-facebook-login';
 
-export default class FacebookLogin extends Component {
+export default class extends Component {
   render() {
     return (
-      <div className="App">
-       <h1> Lgin with Faceboook </h1>
-      </div>
+        <FacebookLogin
+        appId="1088597931155576"
+        autoLoad={true}
+        fields="name,email,picture"
+        onClick={(a) => (a)}
+        callback={(a) => (a)} />
     );
   }
 }
 
 
+// add FB Pixel
+// show demo that listens most, avg spending er age, social group,
+// can see os so which listeners have best hash power, who to market people to

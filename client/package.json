@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cloudinary-react": "^1.0.6",
     "react": "^16.2.0",
+    "react-coinhive": "^1.0.2",
     "react-dom": "^16.2.0",
+    "react-facebook-login": "^4.0.1",
     "react-scripts": "1.1.1"
   },
   "scripts": {
