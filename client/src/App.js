@@ -30,17 +30,12 @@ class App extends Component {
           <h1 className="App-title">Welcome to Dapster</h1>
         </header>
         {/* if url=/profile add artis details */}
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        {/* <CoinHive /> */}
+        <CoinHive />
         <div id="content-container">
           <StreamQueue />
           <Profile />
         </div>
-
         <FacebookLogin />
-
       </div>
     );
   }

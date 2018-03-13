@@ -14,10 +14,16 @@ export default class extends Component {
   render() {
     return (
       <div className="media-player">
-        <h4> {this.props.songTitle || "song title"} </h4>
+        <div>
+          <h4> {this.props.songTitle || "song title"} </h4>
+        </div>
         {/* embed cloudinary widget */}
-        <p> ------------------------------------------------> </p>
-        <p> play </p>
+        <div>
+          <p> ------------------------------------------------> </p>
+        </div>
+        <div>
+          <p> play </p>
+        </div>
       </div>
     );
   }

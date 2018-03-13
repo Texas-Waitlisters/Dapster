@@ -48,10 +48,9 @@
 }
 
 .media-player {
-  flex: 1;
+  /* flex: 1; */
   flex-direction: row;
-  justify-content: flex-start;
-  
+  /* justify-content: flex-start; */
 }
 
 @keyframes App-logo-spin {
