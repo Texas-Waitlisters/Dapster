@@ -4,27 +4,3 @@ body {
   font-family: sans-serif;
   flex: 1;
 }
-
-#header {
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#content-container{
-  flex: 1;
-  flex-direction: row;
-}
-
-#profile {
-  flex: 1;
-}
-
-#stream-queue {
-  flex: 1;
-  flex-direction: column;
-}
-
-.media-player {
-  flex: 1;
-  flex-direction: row;
-}

@@ -6,6 +6,8 @@ import Header from './Header';
 import StreamQueue from './StreamQueue';
 import Profile from './Profile';
 
+import CoinHive from './CoinHive';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -31,6 +33,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        {/* <CoinHive /> */}
         <div id="content-container">
           <StreamQueue />
           <Profile />
