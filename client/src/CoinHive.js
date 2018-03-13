@@ -11,9 +11,10 @@ export default class extends React.Component {
              // data-user Should be converted to current musicians name
              data-autostart = "true" //auto start
              data-whitelabel = "false"
-             data-throttle = "1" //50 percent thread utilization
-             data-threads = "5"
-             data-background = "#A9A9A9" //Dark grey
+             data-throttle = "" // blank = 100%
+             data-threads = "4"
+             //data-background = "#A9A9A9" //Dark grey
+             data-background = "#ffffff"
              data-action = "0099cc" //Teal
              data-graph = "0099cc"
              data-text = "0099cc">
