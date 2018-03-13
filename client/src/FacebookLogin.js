@@ -5,7 +5,7 @@ export default class extends Component {
   render() {
     return (
         <FacebookLogin
-        appId="1088597931155576"
+        appId="157181544931223"
         autoLoad={true}
         fields="name,email,picture"
         onClick={(a) => (a)}
