@@ -13,18 +13,17 @@ export default (props) =>  {
 
   return (
 
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton className="menuButton" color="inherit" aria-label="Menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="title" color="inherit">
-            Dappster
-          </Typography>
-          <FacebookLogin />
-        </Toolbar>
-      </AppBar>
+	  <AppBar position="static">
+		<Toolbar>
+		  <IconButton className="menuButton" color="inherit" aria-label="Menu">
+			<MenuIcon />
+		  </IconButton>
+		  <Typography variant="title" color="inherit">
+			Dappster &nbsp; &nbsp;
+		  </Typography>
+		  <FacebookLogin />
+		</Toolbar>
+	  </AppBar>
 
   );
 }
-
