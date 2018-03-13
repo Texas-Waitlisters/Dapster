@@ -5,7 +5,7 @@ export default class extends React.Component {
   render() {
     return (
         <div className = "coinhive-miner"
-  	         style = {{width: 256, height: 310}}
+  	         style = {{width: 160, height: 600}}
   	         data-key = "iUHtfh5ZLhgoaOUoraaCbzwVlGhJkPWt"
              data-user = "Dappster Music Distribution"
              // data-user Should be converted to current musicians name
@@ -13,10 +13,10 @@ export default class extends React.Component {
              data-whitelabel = "false"
              data-throttle = ".5" //50 percent thread utilization
              data-threads = "3"
-             data-background = "#D3D3D3" //Grey
-             data-action = "008080" //Teal
-             data-graph = "008080"
-             data-text = "008080">
+             data-background = "#A9A9A9" //Dark grey
+             data-action = "0099cc" //Teal
+             data-graph = "0099cc"
+             data-text = "0099cc">
   	         <em>Mining...</em>
         </div>
     )
