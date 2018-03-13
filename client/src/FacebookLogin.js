@@ -11,6 +11,7 @@ export default class extends Component {
   render() {
     return (
       <FacebookLogin
+        icon="fa-facebook"
         backgroundColor="#3f51b5"
         appId="157181544931223"
         autoLoad={true}
