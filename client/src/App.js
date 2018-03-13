@@ -33,7 +33,7 @@ class App extends Component {
         <CoinHive />
         <div id="content-container">
           <StreamQueue />
-          <Profile />
+          <Profile artistID={5514991}/>
         </div>
         <FacebookLogin />
       </div>
