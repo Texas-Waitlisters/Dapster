@@ -8,6 +8,10 @@ export default class extends React.Component {
         <div class="coinhive-miner"
   	         style="width: 256px; height: 310px"
   	         data-key="iUHtfh5ZLhgoaOUoraaCbzwVlGhJkPWt">
+             data-user="Dappster Music Distribution"
+             //data-user Should be converted to current musicians name
+             data-autostart="true" //Automatically starts mining when user logs in
+             data-whitelabel="false"
   	         <em>Loading...</em>
         </div>
     )
