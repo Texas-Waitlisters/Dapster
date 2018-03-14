@@ -55,22 +55,22 @@ export default class extends Component {
       );
     } else {
       const artistProfile = axios
-      .get(`https://evangelism.cloudinary.auth0-extend.com/sxsw-music-discovery-service/releases/${artistID}`)
-      .then((data) => {
-        const { releases: { release } } = data;
-        this.setState({
-          type: "artist",
-          releases: release
+        .get(`https://evangelism.cloudinary.auth0-extend.com/sxsw-music-discovery-service/releases/${artistID}`)
+        .then((data) => {
+          const { releases: { release } } = data;
+          this.setState({
+            type: "artist",
+            releases: release
+          })
+          console.log('release', release);
         })
-        console.log('release', release);
-      })
-      .catch((err) => {
-        this.setState({
-          type: "artist",
-          releases: [{type: "StackOverflow", title: "This artists has done too many amazing things to list"}]
+        .catch((err) => {
+          this.setState({
+            type: "artist",
+            releases: [{type: "StackOverflow", title: "This artists has done too many amazing things to list"}]
+          });
         });
-      });
-      console.log('art prof', artistProfile);
+        console.log('art prof', artistProfile);
     }
   }
 

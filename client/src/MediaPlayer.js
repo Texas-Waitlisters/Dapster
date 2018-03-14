@@ -8,6 +8,8 @@ import ReactAudioPlayer from 'react-audio-player';
 import Sound from 'react-sound';
 import BuyButton from './BuyButton';
 import AudioPlayer from 'react-cl-audio-player';
+import axios from 'axios';
+
 // import MediaPlayer from 'react-audioplayer';
 
 
@@ -64,17 +66,25 @@ export default class extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      playing: false
+      playing: false,
+      verified: false
     }
   }
 
-  toggleMusic() {
-    // logic to toggle play owhen play button pressed
-
-  }
-
-  buyMusic() {
-    // post to api with FB ID and songID
+  checkMusic = (songId = 124132, artist = "Dapster") => {
+    this.setState({verified: false});
+    console.log('check music songId', songId);
+    const facebookId = localStorage.getItem('facebookId');
+      axios.post(
+        'http://localhost:3001/api/check',
+        {facebookId, songId, artist}
+      ).then((result) => {
+        console.log('Checking done', result);
+        this.setState({verified: true});
+        return true;
+      }).catch((error) => {
+        return false;
+      })
   }
 
 
@@ -89,9 +99,13 @@ render() {
             type="text/css"
           />
 
-          <AudioPlayer songs={songs} />
+          <AudioPlayer
+            songs={songs}
+            onNext={this.checkMusic}
+          />
           < br />
-
+          {this.state.verified ? 
+            (<h1>Ownership Not Verified</h1>) : <h1>Verifying....</h1>}
 
         <div>
 

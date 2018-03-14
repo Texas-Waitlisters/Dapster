@@ -3,9 +3,12 @@ import Button from 'material-ui/Button';
 import axios from 'axios';
 
 export default ({songId}) => {
-  const buySong = (songId) => (userId) => {
-    if(userId && songId) {
-      axios.post('api url', {userId, songId})
+  const buySong = (songId) => (facebookId) => {
+    if(facebookId && songId) {
+      axios.post(
+        'http://localhost:3001/api/buy/',
+        {facebookId, songId, artist: "Dapster"}
+      )
         .then((results) => {
           
         })
