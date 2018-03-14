@@ -1,6 +1,6 @@
 // take code from api
 // use cloudinary npm?
-// song url? to stream? 
+// song url? to stream?
 
 import React, {Component} from 'react';
 
@@ -13,7 +13,7 @@ import AudioPlayer from 'react-cl-audio-player';
 
 const songs = [
   {
-    url: 'http://tegos.kz/new/mp3_full/Redfoo_-_New_Thang.mp3',
+    url: 'http://waitlisters.org/21738649.mp3',
     cover:
       'http://www.nossoarmario.com/blog/wp-content/uploads/2015/01/redfoo.jpg',
     artist: {
@@ -83,7 +83,7 @@ export default class extends Component {
       playing: false
     }
   }
-  
+
   toggleMusic() {
     // logic to toggle play owhen play button pressed
 
@@ -98,7 +98,7 @@ render() {
     return (
 
       <div className="media-player">
-                
+
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:100,400,700"
             rel="stylesheet"
@@ -107,12 +107,11 @@ render() {
 
           <AudioPlayer songs={songs} />
           < br />
-          <div class="footer">Copyright &copy; 2018 Waitlisters.</div>
-        
+
         <div>
           <h4> {this.props.songTitle || "song title"} </h4>
         </div>
-        
+
         <div>
 
         {/* <Sound
@@ -125,11 +124,11 @@ render() {
 
 
         </div>
-        
+
         <div onClick={this.toggleMusic}>
           <p> play </p>
         </div>
-      
+
         <div onClick={this.buySong}>
           <BuyButton/>
         </div>
