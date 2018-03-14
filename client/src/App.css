@@ -1,3 +1,16 @@
+#landing-page { 
+  background-image: url("./images/circle.png");
+  background-position: center center ;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content:  center;
+}
+
+#landing-spinner {
+  align-self: center;
+}
+
 .App {
   text-align: center;
 }
@@ -8,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #0FFFFF;
   height: 150px;
   padding: 20px;
   color: white;
@@ -36,6 +49,7 @@
 }
 
 #profile {
+  height:60vh;  
   flex: 1;
   flex-direction: column;
   justify-content: flex-start;
@@ -43,10 +57,17 @@
 }
 
 #stream-queue {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+  max-height: 2%;
+  overflow: scroll;
+  /* display: flex; */
+  /* flex: 1; */
+  /* flex-direction: column; */
   width: 50%;  
+}
+
+.scrollable {
+  height:60vh;
+  overflow:auto;
 }
 
 .media-player {
@@ -54,6 +75,11 @@
   flex: 1;
   flex-direction: row;
   justify-content: flex-start;
+}
+
+.profile-pic {
+  height: 10%;
+  width: auto;
 }
 
 @keyframes App-logo-spin {

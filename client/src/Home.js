@@ -1,12 +1,9 @@
 import React, {Component} from 'react'
 import FacebookLogin from './FacebookLogin';
 
-import logo from './logo.svg';
-import './App.css';
 import StreamQueue from './StreamQueue';
 import Profile from './Profile';
-
-import CoinHive from './CoinHive';
+import Logo from './Logo';
 
 export default class Home extends Component{
 	constructor(props) {
@@ -21,16 +18,14 @@ export default class Home extends Component{
 	render(){
 		return(
 			<div>
-			<header className="App-header">
-			  <img src={logo} className="App-logo" alt="logo" />
-			  <h1 className="App-title">Welcome to Dapster</h1>
-			</header>
-			<CoinHive />
-			<div id="content-container">
-			  <StreamQueue />
-			  <Profile artistID={127414141}/>
-			</div>
-			<FacebookLogin />
+				
+				<Logo height={"25vh"}/>
+
+				<div id="content-container">
+					<StreamQueue />
+					<Profile />
+				</div>
+		
 			</div>
 		)
 	}
