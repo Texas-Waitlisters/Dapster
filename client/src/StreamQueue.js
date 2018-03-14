@@ -9,7 +9,7 @@ export default (props) => {
   //   songs, // array
   // } = props;
 
-  let songs = ["a", "a","a","a","a","a","a"];
+  let songs = ["a"];
   
   // const songPlayer = new APPlayer({
     // container: document.getElementById('stream-queue')
