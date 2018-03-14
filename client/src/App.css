@@ -1,3 +1,16 @@
+#landing-page { 
+  background-image: url("./images/circle.png");
+  background-position: center center ;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content:  center;
+}
+
+#landing-spinner {
+  align-self: center;
+}
+
 .App {
   text-align: center;
 }
@@ -8,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #0FFFFF;
   height: 150px;
   padding: 20px;
   color: white;

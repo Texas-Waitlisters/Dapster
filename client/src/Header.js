@@ -29,13 +29,11 @@ export default class Header extends Component{
 					<IconButton className="menuButton" color="inherit" aria-label="Menu">
 						<MenuIcon onClick = {() => this.setState({open: !this.state.open})}/>
 						<Drawer
-							docked={false}
-							width={200}
 							open={this.state.open}
 							onRequestChange={(open) => this.setState({open})}
 						>
+							<Link to="/stream"><MenuItem onClick={() => this.setState({open: false})}>Listen</MenuItem></Link>
 							<Link to="/"><MenuItem onClick={() => this.setState({open: false})}>Home</MenuItem></Link>
-							<Link to="/offline"><MenuItem onClick={() => this.setState({open: false})}>Offline Viewing</MenuItem></Link>
 						</Drawer>
 					</IconButton>
 
