@@ -1,0 +1,42 @@
+{
+  "name": "dappster",
+  "version": "1.0.0",
+  "description": "Distributed music streaming service that monetizes using mining software.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "asyncawait": "^1.0.6",
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "ethereumjs-wallet": "^0.6.0",
+    "express": "^4.16.3",
+    "moment": "^2.21.0",
+    "mongoose": "^5.0.10",
+    "solc": "^0.4.21",
+    "truffle-contract": "^3.0.4",
+    "truffle-hdwallet-provider": "^0.0.3",
+    "web3": "^0.20.6",
+    "web3-provider-engine": "^13.6.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Texas-Waitlisters/Dapster.git"
+  },
+  "keywords": [
+    "nodejs",
+    "solidity",
+    "mongodb"
+  ],
+  "author": "David Z. Chen (davidzchen-ut)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Texas-Waitlisters/Dapster/issues"
+  },
+  "homepage": "https://github.com/Texas-Waitlisters/Dapster#readme"
+}
