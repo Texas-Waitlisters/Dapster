@@ -35,7 +35,7 @@ export default class Header extends Component{
 				  onRequestChange={(open) => this.setState({open})}
 				>
 				  <Link to="/"><MenuItem onClick={() => this.setState({open: false})}>Home</MenuItem></Link>
-				  <Link to="/offline"><MenuItem onClick={() => this.setState({open: false})}>Offline Viewing</MenuItem></Link>
+				  <Link to="/distribute"><MenuItem onClick={() => this.setState({open: false})}>Distribution</MenuItem></Link>
 				</Drawer>
 				</IconButton>
 			  <Typography variant="title" color="inherit">
