@@ -16,6 +16,16 @@ export default (props) => {
   //   songfile: path,
   //   songId: API id
   // };
+  
+  // const songPlayer = new APPlayer({
+    // container: document.getElementById('stream-queue')
+  //   options,
+  //   configs,
+  //   audio: [
+  //     hard coded songs
+  //   ]
+  // });
+
 
   return (
     <List id="stream-queue" className="scrollable">

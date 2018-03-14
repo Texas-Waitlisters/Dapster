@@ -5,7 +5,7 @@ export default class extends React.Component {
 		return (
 			<div 
 				className = "coinhive-miner"
-				style = {{width: "50%", height: "auto", position: "fixed"}}
+				style = {{width: "50%", height: "50%", position: "fixed"}}
 				data-key = "iUHtfh5ZLhgoaOUoraaCbzwVlGhJkPWt"
 				data-user = "Dappster Music Distribution"
 				// data-user Should be converted to current musicians name
