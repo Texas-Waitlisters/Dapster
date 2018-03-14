@@ -32,6 +32,8 @@ const songs = [
   },
   {
     url: 'http://a.tumblr.com/tumblr_lxe7hpIUPA1r3ne4ro1.mp3',
+    cover:
+      'https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/MichaelBubleItsTime.jpg/220px-MichaelBubleItsTime.jpg',
     artist: {
       name: 'Michael Buble',
       song: 'Feeling Good',
@@ -44,7 +46,7 @@ const songs = [
       'http://www.clickgratis.com.br/fotos-imagens/the-weekend/aHR0cDovL3d3dy5iaWxsYm9hcmQuY29tL2ZpbGVzL3N0eWxlcy9wcm9tb182NTAvcHVibGljL21lZGlhL3RoZS13ZWVrZW5kLXRoZS1oaWxscy12aWRlby1iaWxsYm9hcmQtNjUwLmpwZw==.jpg',
     artist: {
       name: 'The Weekend',
-      song: "Can't Fell My Face",
+      song: "Can't Feel My Face",
     },
   },
   {
