@@ -35,6 +35,8 @@ export default class Header extends Component{
 							<Link to="/stream"><MenuItem onClick={() => this.setState({open: false})}>Listen</MenuItem></Link>
 							<Link to="/"><MenuItem onClick={() => this.setState({open: false})}>Home</MenuItem></Link>
 							<Link to="/distribute"><MenuItem onClick={() => this.setState({open: false})}>Distribution</MenuItem></Link>
+							<Link to="/received"><MenuItem onClick={() => this.setState({open: false})}>Received Content</MenuItem></Link>
+
 						</Drawer>
 					</IconButton>
 
