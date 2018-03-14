@@ -10,7 +10,7 @@ export default (props) => {
 
   let songs = ["a", "a","a","a","a","a","a"];
   return (
-    <div id="stream-queue">
+    <div id="stream-queue" className="scrollable">
       {songs.map((song, i) => <MediaPlayer key={i} song={song}/>)}
     </div>
   )

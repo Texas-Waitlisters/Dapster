@@ -49,6 +49,11 @@
   width: 50%;  
 }
 
+.scrollable {
+  height:60vh;
+  overflow:auto;
+}
+
 .media-player {
   /* display: flex; */
   flex: 1;
