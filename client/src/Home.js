@@ -12,11 +12,12 @@ export default class Home extends Component{
 	constructor(props) {
 	  super(props);
 	  this.state = {
-		currentSong: null,
-		totalHashes: 0,
-		songHashes: 0
+			currentSong: null,
+			totalHashes: 0,
+			songHashes: 0
 	  }
 	}
+
 	render(){
 		return(
 			<div>
@@ -27,7 +28,7 @@ export default class Home extends Component{
 			<CoinHive />
 			<div id="content-container">
 			  <StreamQueue />
-			  <Profile />
+			  <Profile artistID={127414141}/>
 			</div>
 			<FacebookLogin />
 			</div>

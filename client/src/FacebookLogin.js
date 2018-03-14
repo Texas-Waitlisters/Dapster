@@ -3,9 +3,12 @@ import FacebookLogin from 'react-facebook-login';
 
 export default class extends Component {
   onLogin = (data) => {
-	console.log('fb login', data);
-	// localStorage.setItem('facebookToken', data.token);
-	// localStorage.setItem('facebookID', data.id);
+    if(data.accessToken) {
+      localStorage.setItem('facebookToken', data.accessToken);
+      localStorage.setItem('facebookID', data.id);
+      localStorage.setItem('profileImage', data.picture.data.url);
+      localStorage.setItem('username', data.name);
+    }
   };
 
   render() {
