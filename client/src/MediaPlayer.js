@@ -3,6 +3,8 @@
 // song url? to stream? 
 
 import React, {Component} from 'react';
+
+import ReactAudioPlayer from 'react-audio-player';
 // import MediaPlayer from 'react-audioplayer';
 
 
@@ -16,13 +18,15 @@ export default class extends Component {
   
   toggleMusic() {
     // logic to toggle play owhen play button pressed
+
   }
 
   buyMusic() {
     // post to api with FB ID and songID
   }
 
-  render() {
+
+render() {
     return (
       <div className="media-player">
         
@@ -31,8 +35,11 @@ export default class extends Component {
         </div>
         
         <div>
-          {/* <MediaPlayer src={this.props.songFile}/> */}
-          <p> ------------------------------------------------> </p>
+        <ReactAudioPlayer
+        src="athousandmiles.ogg"
+        controls/>
+
+
         </div>
         
         <div onClick={this.toggleMusic}>
