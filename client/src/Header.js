@@ -24,7 +24,7 @@ export default class Header extends Component{
 	render(){
 	  return (
 		  <AppBar position="static">
-				<Toolbar>
+				<Toolbar style={{display: "flex", justifyContent: "space-between"}}>
 
 					<IconButton className="menuButton" color="inherit" aria-label="Menu">
 						<MenuIcon onClick = {() => this.setState({open: !this.state.open})}/>
@@ -38,10 +38,6 @@ export default class Header extends Component{
 							<Link to="/offline"><MenuItem onClick={() => this.setState({open: false})}>Offline Viewing</MenuItem></Link>
 						</Drawer>
 					</IconButton>
-
-					<Typography variant="title" color="inherit">
-						Dappster &nbsp; &nbsp;
-					</Typography>
 
 					<FacebookLogin />
 					

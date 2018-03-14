@@ -10,12 +10,6 @@ export default (props) => {
   // } = props;
 
   let songs = ["a", "a","a","a","a","a","a"];
-
-  // replace "a" with {
-  //   songTitle: title,
-  //   songfile: path,
-  //   songId: API id
-  // };
   
   // const songPlayer = new APPlayer({
     // container: document.getElementById('stream-queue')
