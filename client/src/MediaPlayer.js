@@ -6,9 +6,10 @@ import React, {Component} from 'react';
 
 import ReactAudioPlayer from 'react-audio-player';
 import Sound from 'react-sound';
+import BuyButton from './BuyButton';
 import AudioPlayer from 'react-cl-audio-player';
 // import MediaPlayer from 'react-audioplayer';
-import BuyButton from './BuyButton';
+
 
 const songs = [
   {
