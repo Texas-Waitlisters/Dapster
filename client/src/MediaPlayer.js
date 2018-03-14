@@ -5,6 +5,7 @@
 import React, {Component} from 'react';
 
 import ReactAudioPlayer from 'react-audio-player';
+import Sound from 'react-sound';
 // import MediaPlayer from 'react-audioplayer';
 
 
@@ -35,9 +36,14 @@ render() {
         </div>
         
         <div>
-        <ReactAudioPlayer
-        src="athousandmiles.ogg"
-        controls/>
+
+        {/* <Sound
+          url="test.mp3"
+          volume={100}
+          autoload
+          playStatus={Sound.status.PLAYING}
+          onError={(err) => console.log('error audio', err)}
+        /> */}
 
 
         </div>

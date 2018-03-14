@@ -82,6 +82,13 @@
   width: auto;
 }
 
+.buy-button {
+  height: 2vh;
+  width: 1vh;
+  background-color: "purple";
+  color:"puple";
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

@@ -34,11 +34,12 @@ export default class Header extends Component{
 						>
 							<Link to="/stream"><MenuItem onClick={() => this.setState({open: false})}>Listen</MenuItem></Link>
 							<Link to="/"><MenuItem onClick={() => this.setState({open: false})}>Home</MenuItem></Link>
+							<Link to="/distribute"><MenuItem onClick={() => this.setState({open: false})}>Distribution</MenuItem></Link>
 						</Drawer>
 					</IconButton>
 
 					<FacebookLogin />
-					
+
 				</Toolbar>
 		  </AppBar>
 	  );
