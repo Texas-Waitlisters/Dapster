@@ -13,11 +13,12 @@ export default class Home extends Component{
 	constructor(props) {
 	  super(props);
 	  this.state = {
-		currentSong: null,
-		totalHashes: 0,
-		songHashes: 0
+			currentSong: null,
+			totalHashes: 0,
+			songHashes: 0
 	  }
 	}
+
 	render(){
 		return(
 			<div>
