@@ -13,24 +13,6 @@ import AudioPlayer from 'react-cl-audio-player';
 
 const songs = [
   {
-    url: 'http://tegos.kz/new/mp3_full/Redfoo_-_New_Thang.mp3',
-    cover:
-      'http://www.nossoarmario.com/blog/wp-content/uploads/2015/01/redfoo.jpg',
-    artist: {
-      name: 'Redfoo',
-      song: 'New Thang',
-    },
-  },
-  {
-    url: 'http://a.tumblr.com/tumblr_lpoc6cHNDP1r0jthjo1.mp3',
-    cover:
-      'http://www.cmchatlive.com/scenic/wp-content/uploads/2015/05/hugo-99-problems-country-that.jpg',
-    artist: {
-      name: 'Hugo',
-      song: '99 Problems',
-    },
-  },
-  {
     url: 'http://claymore.france.free.fr/momo/summer love.mp3',
     cover:
       'http://myuvn.com/wp-content/uploads/2015/07/justin-timberlake-pusher-love-girl.jpg',
