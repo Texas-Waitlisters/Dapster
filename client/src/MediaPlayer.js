@@ -1,6 +1,6 @@
 // take code from api
 // use cloudinary npm?
-// song url? to stream? 
+// song url? to stream?
 
 import React, {Component} from 'react';
 
@@ -67,7 +67,7 @@ export default class extends Component {
       playing: false
     }
   }
-  
+
   toggleMusic() {
     // logic to toggle play owhen play button pressed
 
@@ -82,7 +82,7 @@ render() {
     return (
 
       <div className="media-player">
-                
+
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:100,400,700"
             rel="stylesheet"
@@ -92,11 +92,7 @@ render() {
           <AudioPlayer songs={songs} />
           < br />
 
-        
-        <div>
-          <h4> {this.props.songTitle || "song title"} </h4>
-        </div>
-        
+
         <div>
 
         {/* <Sound
@@ -109,13 +105,6 @@ render() {
 
 
         </div>
-        
-        <div onClick={this.toggleMusic}>
-          <p> play </p>
-        </div>
-      
-
-
       </div>
     );
   }
