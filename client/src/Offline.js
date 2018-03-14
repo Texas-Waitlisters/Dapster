@@ -12,14 +12,18 @@ export default class Offline extends Component{
 	componentWillMount(){
 
 	}
+
 	render(){
 		return(
 			<div>
-			<RingLoader
-			  color={'#123abc'}
-			  loading={this.state.loading}
-			/>
-			<p>Hi</p>
+			
+				<RingLoader
+					color={'#123abc'}
+					loading={this.state.loading}
+				/>
+
+				<p>Hi</p>
+
 			</div>
 		)
 	}

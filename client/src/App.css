@@ -56,6 +56,10 @@
   justify-content: flex-start;
 }
 
+.profile-pic {
+  height: 10%;
+  width: auto;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
