@@ -1,5 +1,5 @@
 import boto3
-
+import json
 client = boto3.client('s3')
 s3 = boto3.resource('s3')
 import hashlib
@@ -62,6 +62,46 @@ def list_owned_objects(owner):
 			all_items.append(item)
 	return all_items
 
+
+def grant_permissions(owner, file_name, fb_id):
+	all_objects = client.list_objects(Bucket = bucket_name);
+	if 'Contents' not in all_objects.keys():
+		return "Failure"
+	for content in all_objects['Contents']:
+		all_body = download_from_s3(str(content['Key']))
+		item = all_body.split("%")[0]
+		if owner == all_body.split("%")[2] and file_name == all_body.split("%")[0]:
+			response = client.get_object_tagging(
+				Bucket=bucket_name,
+				Key=content['Key'],
+			)
+			if response['TagSet'] == []:
+				cur_tags = [{'Key': fb_id,'Value': "valid"}]
+			else:
+				new_item = [{'Key': fb_id,'Value': "valid"}]
+				list_tags = response['TagSet']
+				cur_tags = list_tags + new_item
+			client.put_object_tagging(Bucket=bucket_name, Key=content['Key'], Tagging = {'TagSet': cur_tags})
+			return "Success"
+	return "Failure"
+
+def list_owned_with_grantee(owner):
+	all_objects = client.list_objects(Bucket = bucket_name);
+	all_items = []
+	if 'Contents' not in all_objects.keys():
+		return []
+	for content in all_objects['Contents']:
+		all_body = download_from_s3(str(content['Key']))
+		item = all_body.split("%")[0]
+		if owner == all_body.split("%")[2]:
+			response = client.get_object_tagging(
+				Bucket=bucket_name,
+				Key=content['Key'],
+			)
+			new_list = [item]
+			new_list += [list(map(lambda x: x['Key'], response['TagSet']))]
+			all_items.append(new_list)
+	return all_items
 
 def initialize_s3():
 	if not _get(bucket_name):
