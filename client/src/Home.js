@@ -22,7 +22,7 @@ export default class Home extends Component{
 				<Logo height={"25vh"}/>
 
 				<div id="content-container">
-					<StreamQueue />
+					<MediaPlayer />
 					<Profile />
 				</div>
 		
