@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Avatar from 'material-ui/Avatar';
+import Card from 'material-ui/Card';
+import CoinHive from './CoinHive';
 import axios from 'axios';
 
 export default class extends Component {
@@ -72,11 +74,12 @@ export default class extends Component {
 
   render() {
     return (
-      <div id="profile">
+      <Card id="profile">
         {this.props.artistID ?
           this.renderArtistProfile(this.props.artistID) :
           this.renderUserProfile()}
-      </div>
+        <CoinHive />
+      </Card>
     );
   }
 }
