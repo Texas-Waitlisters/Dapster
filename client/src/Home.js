@@ -4,6 +4,7 @@ import FacebookLogin from './FacebookLogin';
 import StreamQueue from './StreamQueue';
 import Profile from './Profile';
 import Logo from './Logo';
+import MediaPlayer from './MediaPlayer';
 
 export default class Home extends Component{
 	constructor(props) {
@@ -22,7 +23,7 @@ export default class Home extends Component{
 				<Logo height={"25vh"}/>
 
 				<div id="content-container">
-					<StreamQueue />
+					<MediaPlayer />
 					<Profile />
 				</div>
 		
