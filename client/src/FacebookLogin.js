@@ -6,7 +6,8 @@ export default class extends Component {
     if(data.accessToken) {
       localStorage.setItem('facebookToken', data.accessToken);
       localStorage.setItem('facebookID', data.id);
-      localStorage.setItem('profileImage', data.picture.data.url)
+      localStorage.setItem('profileImage', data.picture.data.url);
+      localStorage.setItem('username', data.name);
     }
   };
 

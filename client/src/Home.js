@@ -28,7 +28,7 @@ export default class Home extends Component{
 			<CoinHive />
 			<div id="content-container">
 			  <StreamQueue />
-			  <Profile />
+			  <Profile artistID={127414141}/>
 			</div>
 			<FacebookLogin />
 			</div>

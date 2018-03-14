@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Avatar from 'material-ui/Avatar';
 import axios from 'axios';
 
 export default class extends Component {
@@ -18,8 +19,8 @@ export default class extends Component {
       <div>
         <h4> USER PROFILE </h4>
         <div>
-          <h1> My name </h1>
-          {/* <img src={facebookImg} */}
+          <h1> {localStorage.getItem('username')} </h1>
+          <img src={localStorage.getItem('profileImage')} />
         </div>
         <h4> Dappster Coins Earned: {totalCoins} </h4> 
       </div>
