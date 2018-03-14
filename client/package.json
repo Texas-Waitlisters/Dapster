@@ -15,7 +15,8 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "^1.1.1",
     "react-sound": "^1.1.0",
-    "react-spinners": "^0.2.6"
+    "react-spinners": "^0.2.6",
+    "requests": "^0.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
