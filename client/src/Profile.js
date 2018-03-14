@@ -4,6 +4,8 @@ import Card from 'material-ui/Card';
 import CoinHive from './CoinHive';
 import axios from 'axios';
 
+import BuyButton from './BuyButton';
+
 export default class extends Component {
   constructor(props) {
     super(props);
