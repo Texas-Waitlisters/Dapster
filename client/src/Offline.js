@@ -24,7 +24,7 @@ export default class Distribution extends Component{
 		console.log(cur_user)
 		if (cur_user != null){
 			var options = { method: 'GET',
-			  url: 'http://127.0.0.1:5000/list_all_owned_items_with_grantees',
+			  url: 'http://ec2-18-219-68-66.us-east-2.compute.amazonaws.com/list_all_owned_items_with_grantees',
 			  qs: { owner: cur_user } };
 
 			request(options, function (error, response, body) {
@@ -49,9 +49,9 @@ export default class Distribution extends Component{
 			}
 			else{
 				all_items = this.state.staged_files.map((file) => {
-					return <GridTile key = {file[0]} class = 'tile'><center><h3><a href={"http://127.0.0.1:5000/decrypt_file?file="+file[0]}>{file[0]}</a></h3></center>
+					return <GridTile key = {file[0]} class = 'tile'><center><h3><a href={"http://ec2-18-219-68-66.us-east-2.compute.amazonaws.com/decrypt_file?file="+file[0]}>{file[0]}</a></h3></center>
 					<p>Permissions Granted To: {file[1]}</p>
-					<form action="http://127.0.0.1:5000/give_perm" method="GET" target="dummyframe">
+					<form action="http://ec2-18-219-68-66.us-east-2.compute.amazonaws.com/give_perm" method="GET" target="dummyframe">
 					Facebook ID: <input type="text" name="granted" />
 					<input type = "hidden" name = "file" value = {file[0]} />
 					<input type = "hidden" name = "owner" value = {localStorage.getItem('facebookID')} />
@@ -70,12 +70,14 @@ export default class Distribution extends Component{
 			<h4>This is where you, as an artist, can distribute your content privately to other users</h4>
 			<h4> Your ID is {localStorage.getItem('facebookID')}. Use this code to receive content</h4>
 			<h4>Upload files here:</h4>
-			<form action = "http://127.0.0.1:5000/encrypt_file" method = "POST"
+			<form action = "http://ec2-18-219-68-66.us-east-2.compute.amazonaws.com/encrypt_file" method = "POST"
 			   enctype = "multipart/form-data" target = "dummyframe">
 			   <input type = "file" name = "file" />
 			   <input type = "hidden" name = "owner" value = {localStorage.getItem('facebookID')} />
 			   <input type = "submit"/>
 			</form>
+			<br />
+			<br />
 			<center><RingLoader
 			  color={'#123abc'}
 			  loading={this.state.loading}
