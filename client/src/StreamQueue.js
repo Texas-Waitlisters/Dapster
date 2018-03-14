@@ -2,6 +2,7 @@
 // have share button and play button
 import React from 'react';
 import MediaPlayer from './MediaPlayer';
+import List from 'material-ui/List';
 
 export default (props) => {
   // const {
@@ -9,10 +10,23 @@ export default (props) => {
   // } = props;
 
   let songs = ["a", "a","a","a","a","a","a"];
+
+  // replace "a" with {
+  //   songTitle: title,
+  //   songfile: path,
+  //   songId: API id
+  // };
+
   return (
-    <div id="stream-queue" className="scrollable">
-      {songs.map((song, i) => <MediaPlayer key={i} song={song}/>)}
-    </div>
-  )
+    <List id="stream-queue" className="scrollable">
+      {songs.map((song, i) => (
+        <MediaPlayer 
+          key={i}
+          songTitle={song}
+          songFile={song} // replace these
+          songId={song}
+        />))}
+    </List>
+  );
 };
 
