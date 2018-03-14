@@ -103,6 +103,24 @@ def list_owned_with_grantee(owner):
 			all_items.append(new_list)
 	return all_items
 
+def list_all_given(user):
+	all_objects = client.list_objects(Bucket = bucket_name);
+	all_items = []
+	if 'Contents' not in all_objects.keys():
+		return []
+	for content in all_objects['Contents']:
+		response = client.get_object_tagging(
+			Bucket=bucket_name,
+			Key=content['Key'],
+		)
+		print(response)
+		print(user)
+		print([list(map(lambda x: x['Key'], response['TagSet']))])
+		if user in list(map(lambda x: x['Key'], response['TagSet'])):
+			all_body = download_from_s3(str(content['Key']))
+			all_items.append([all_body.split("%")[0], all_body.split("%")[2]])
+	return all_items
+
 def initialize_s3():
 	if not _get(bucket_name):
 		client.create_bucket(ACL='public-read', Bucket=bucket_name,

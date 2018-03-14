@@ -83,6 +83,7 @@
 }
 
 .buy-button {
+  margin:auto;
   height: 2vh;
   width: 1vh;
   background-color: "purple";

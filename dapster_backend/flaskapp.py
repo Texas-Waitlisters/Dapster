@@ -4,7 +4,7 @@ import hashlib
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
-from s3upload import initialize_s3, upload_to_s3, download_from_s3, list_objects, list_owned_objects, grant_permissions, list_owned_with_grantee
+from s3upload import initialize_s3, upload_to_s3, download_from_s3, list_objects, list_owned_objects, grant_permissions, list_owned_with_grantee, list_all_given
 import json
 
 
@@ -56,6 +56,10 @@ def give_permission():
 @app.route('/list_all_owned_items_with_grantees', methods=['GET'])
 def get_all_owned_with_grantees():
 	return json.dumps(list_owned_with_grantee(request.args.get("owner")))
+
+@app.route('/list_sent_content')
+def get_all_sent_content():
+	return json.dumps(list_all_given(request.args.get("user")))
 
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 // take code from api
 // use cloudinary npm?
-// song url? to stream? 
+// song url? to stream?
 
 import React, {Component} from 'react';
 
@@ -12,24 +12,6 @@ import AudioPlayer from 'react-cl-audio-player';
 
 
 const songs = [
-  {
-    url: 'http://tegos.kz/new/mp3_full/Redfoo_-_New_Thang.mp3',
-    cover:
-      'http://www.nossoarmario.com/blog/wp-content/uploads/2015/01/redfoo.jpg',
-    artist: {
-      name: 'Redfoo',
-      song: 'New Thang',
-    },
-  },
-  {
-    url: 'http://a.tumblr.com/tumblr_lpoc6cHNDP1r0jthjo1.mp3',
-    cover:
-      'http://www.cmchatlive.com/scenic/wp-content/uploads/2015/05/hugo-99-problems-country-that.jpg',
-    artist: {
-      name: 'Hugo',
-      song: '99 Problems',
-    },
-  },
   {
     url: 'http://claymore.france.free.fr/momo/summer love.mp3',
     cover:
@@ -50,6 +32,8 @@ const songs = [
   },
   {
     url: 'http://a.tumblr.com/tumblr_lxe7hpIUPA1r3ne4ro1.mp3',
+    cover:
+      'https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/MichaelBubleItsTime.jpg/220px-MichaelBubleItsTime.jpg',
     artist: {
       name: 'Michael Buble',
       song: 'Feeling Good',
@@ -62,7 +46,7 @@ const songs = [
       'http://www.clickgratis.com.br/fotos-imagens/the-weekend/aHR0cDovL3d3dy5iaWxsYm9hcmQuY29tL2ZpbGVzL3N0eWxlcy9wcm9tb182NTAvcHVibGljL21lZGlhL3RoZS13ZWVrZW5kLXRoZS1oaWxscy12aWRlby1iaWxsYm9hcmQtNjUwLmpwZw==.jpg',
     artist: {
       name: 'The Weekend',
-      song: "Can't Fell My Face",
+      song: "Can't Feel My Face",
     },
   },
   {
@@ -83,7 +67,7 @@ export default class extends Component {
       playing: false
     }
   }
-  
+
   toggleMusic() {
     // logic to toggle play owhen play button pressed
 
@@ -98,7 +82,7 @@ render() {
     return (
 
       <div className="media-player">
-                
+
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:100,400,700"
             rel="stylesheet"
@@ -107,12 +91,8 @@ render() {
 
           <AudioPlayer songs={songs} />
           < br />
-          <div class="footer">Copyright &copy; 2018 Waitlisters.</div>
-        
-        <div>
-          <h4> {this.props.songTitle || "song title"} </h4>
-        </div>
-        
+
+
         <div>
 
         {/* <Sound
@@ -126,14 +106,7 @@ render() {
 
         </div>
         
-        <div onClick={this.toggleMusic}>
-          <p> play </p>
-        </div>
-      
-        <div onClick={this.buySong}>
-          <BuyButton/>
-        </div>
-
+        
       </div>
     );
   }

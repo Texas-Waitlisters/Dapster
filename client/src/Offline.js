@@ -50,7 +50,7 @@ export default class Distribution extends Component{
 			else{
 				all_items = this.state.staged_files.map((file) => {
 					return <GridTile key = {file[0]} class = 'tile'><center><h3><a href={"http://ec2-18-219-68-66.us-east-2.compute.amazonaws.com/decrypt_file?file="+file[0]}>{file[0]}</a></h3></center>
-					<p>Permissions Granted To: {file[1]}</p>
+					<p>Permissions Granted To: {JSON.stringify(file[1]).slice(1,-1)}</p>
 					<form action="http://ec2-18-219-68-66.us-east-2.compute.amazonaws.com/give_perm" method="GET" target="dummyframe">
 					Facebook ID: <input type="text" name="granted" />
 					<input type = "hidden" name = "file" value = {file[0]} />
