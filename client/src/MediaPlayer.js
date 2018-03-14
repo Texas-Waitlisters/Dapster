@@ -37,6 +37,13 @@ render() {
         
         <div>
 
+        {/* <Sound
+          url="test.mp3"
+          volume={100}
+          autoload
+          playStatus={Sound.status.PLAYING}
+          onError={(err) => console.log('error audio', err)}
+        /> */}
 
 
         </div>
