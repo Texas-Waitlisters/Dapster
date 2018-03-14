@@ -1,15 +1,12 @@
 import React, {Component} from 'react';
-import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import FacebookLogin from './FacebookLogin';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/Menu/MenuItem';
-import Menu from 'material-ui/Menu'
 import {Link} from 'react-router-dom'
 export default class Header extends Component{
 	constructor(props){
@@ -37,8 +34,8 @@ export default class Header extends Component{
 				  open={this.state.open}
 				  onRequestChange={(open) => this.setState({open})}
 				>
-				  <MenuItem onClick={() => this.setState({open: false})}><Link to="/">Home</Link></MenuItem>
-				  <MenuItem onClick={() => this.setState({open: false})}><Link to="/offline">Offline Downloads</Link></MenuItem>
+				  <Link to="/"><MenuItem onClick={() => this.setState({open: false})}>Home</MenuItem></Link>
+				  <Link to="/offline"><MenuItem onClick={() => this.setState({open: false})}>Offline Viewing</MenuItem></Link>
 				</Drawer>
 				</IconButton>
 			  <Typography variant="title" color="inherit">
