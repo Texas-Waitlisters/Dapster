@@ -4,6 +4,7 @@ import FacebookLogin from './FacebookLogin';
 import StreamQueue from './StreamQueue';
 import Profile from './Profile';
 import Logo from './Logo';
+import MediaPlayer from './MediaPlayer';
 
 export default class Home extends Component{
 	constructor(props) {
