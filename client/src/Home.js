@@ -26,6 +26,7 @@ export default class Home extends Component{
 					<MediaPlayer />
 					<Profile />
 				</div>
+			        <div class="footer">Copyright &copy; 2018 Waitlisters.</div>
 		
 			</div>
 		)
