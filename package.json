@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "react-audio-player": "^0.9.0",
+    "react-cl-audio-player": "^2.1.1",
     "react-spinners": "^0.2.6"
   }
 }
