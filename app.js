@@ -5,7 +5,7 @@ require('dotenv').load({silent: true});
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3001;
 var database = process.env.DATABASE || process.env.MONGODB_URI || "mongodb://localhost:27017";
 
 mongoose.connect(database);

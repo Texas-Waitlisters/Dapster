@@ -36,13 +36,13 @@ function getSongById(songId, artist) {
     });
 }
 
-function getUserById(fbId) {
+function getUserById(fbId, userAddress) {
     return new Promise(function (resolve, reject) {
         UserController.findOneByFbId(fbId, function(result, err) {
             console.log(result);
             if (err) {
                 console.log("error 2");
-                UserController.createWallet(fbId, blockchain.getUserAccounts()[counter], function(result1, error) {
+                UserController.createWallet(fbId, userAddress, function(result1, error) {
                     resolve(result1.walletAddress);    
                 });
             }
@@ -52,8 +52,8 @@ function getUserById(fbId) {
             } 
             else {
                 console.log("no result 2");
-                UserController.createWallet(fbId, blockchain.getUserAccounts()[counter], function(result1, error) {
-                    counter++;
+                UserController.createWallet(fbId, userAddress, function(result1, error) {
+                    console.log(result1 + "   " + error);
                     resolve(result1.walletAddress);
                 });
             }
@@ -70,11 +70,11 @@ module.exports = function(router) {
     router.post('/buy', async(function(req, res, next) {
         console.log(req.body);
         var contractAddress = await(getSongById(req.body.songId, req.body.artist));
-        var walletAddress = await(getUserById(req.body.facebookId));
+        var walletAddress = await(getUserById(req.body.facebookId, req.body.address));
 
         console.log(contractAddress + " " + walletAddress);
        
-        await(blockchain.addToken(req.body.songId, walletAddress, contractAddress, [blockchain.getAdminAccount()])); 
+        await(blockchain.addToken(req.body.songId, walletAddress, contractAddress, [blockchain.getAddress()])); 
         console.log("Wallet Address:" + walletAddress + " has successfully bought from " + contractAddress);
         res.send(200, {message: "ok"});
     }));
@@ -83,7 +83,7 @@ module.exports = function(router) {
         console.log(req.body);
 
         var contractAddress = await(getSongById(req.body.songId, req.body.artist));
-        var walletAddress = await(getUserById(req.body.facebookId));
+        var walletAddress = await(getUserById(req.body.facebookId, req.body.address));
 
         value = await(blockchain.hasToken(walletAddress, contractAddress));
 
