@@ -7,8 +7,8 @@ export default class DefaultRouter extends Component{
 	render(){
 		return(
 			<Switch>
-				<Route exact path = "/stream" component = {Home}/>
 				<Route exact path = "/" component = {Logo}/>
+				<Route exact path = "/stream" component = {Home}/>
 			</Switch>
 		)
 	}
