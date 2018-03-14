@@ -114,9 +114,7 @@ render() {
           <p> play </p>
         </div>
       
-        <div onClick={this.buySong}>
-          <BuyButton/>
-        </div>
+
 
       </div>
     );
