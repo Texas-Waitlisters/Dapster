@@ -27,7 +27,7 @@ export default class extends Component {
           <img className="profile-pic" src={localStorage.getItem('profileImage')} />}
         </div>
         
-        <h4> Dappster Coins Earned: {totalCoins} </h4> 
+        <h1> Dappster Coins Earned: {totalCoins} </h1> 
       
       </div>
     );

@@ -10,12 +10,16 @@ export default (props) => {
   // } = props;
 
   let songs = ["a", "a","a","a","a","a","a"];
+  
+  // const songPlayer = new APPlayer({
+    // container: document.getElementById('stream-queue')
+  //   options,
+  //   configs,
+  //   audio: [
+  //     hard coded songs
+  //   ]
+  // });
 
-  // replace "a" with {
-  //   songTitle: title,
-  //   songfile: path,
-  //   songId: API id
-  // };
 
   return (
     <List id="stream-queue" className="scrollable">
