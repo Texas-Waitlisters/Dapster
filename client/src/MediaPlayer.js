@@ -91,7 +91,7 @@ render() {
 
           <AudioPlayer songs={songs} />
           < br />
-          <div class="footer">Copyright &copy; 2018 Waitlisters.</div>
+
         
         <div>
           <h4> {this.props.songTitle || "song title"} </h4>
