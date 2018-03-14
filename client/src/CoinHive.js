@@ -7,7 +7,7 @@ export default class extends React.Component {
 				className = "coinhive-miner"
 				style = {{width: "50%", height: "50%", position: "fixed"}}
 				data-key = "iUHtfh5ZLhgoaOUoraaCbzwVlGhJkPWt"
-				data-user = "Dappster Music Distribution"
+				data-user = "Dapster Music Distribution"
 				// data-user Should be converted to current musicians name
 				data-autostart = "true" //auto start
 				data-whitelabel = "false"
@@ -15,9 +15,9 @@ export default class extends React.Component {
 				data-threads = "4"
 				//data-background = "#A9A9A9" //Dark grey
 				data-background = "#ffffff"
-				data-action = "0099cc" //Teal
-				data-graph = "0099cc"
-				data-text = "0099cc">
+				data-action = "9D47A8" //Teal
+				data-graph = "9D47A8"
+				data-text = "9D47A8">
 				<em>Mining...</em>
 			</div>
 		)

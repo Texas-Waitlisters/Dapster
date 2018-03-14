@@ -19,7 +19,7 @@ export default class extends Component {
     return (
       <div>
 
-        <h4> USER PROFILE </h4>
+        <h4>User Profile</h4>
         
         <div>
           <h1> {localStorage.getItem('username') || "Login to Facebook :P"} </h1>
@@ -27,7 +27,7 @@ export default class extends Component {
           <img className="profile-pic" src={localStorage.getItem('profileImage')} />}
         </div>
         
-        <h1> Dappster Coins Earned: {totalCoins} </h1> 
+        <h1> Dapster Coins Earned: {totalCoins} </h1> 
       
       </div>
     );
@@ -41,8 +41,8 @@ export default class extends Component {
         <div>
           <h1> {releases[0].artist ? releases[0].artist.name : "Travis 'The Greatest' Laurendine"} </h1>
           
-          <h4> ARTIST PROFILE </h4>            
-          <h4> Total Dappsters earned: {totalCoins} </h4>
+          <h4>Artist Profile</h4>            
+          <h4> Total Dapsters earned: {totalCoins} </h4>
 
           <h4> Notable Releasess: {releases ? 
             releases.map((r) => `${r.type} - ${r.title}`) :
